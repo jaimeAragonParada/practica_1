@@ -1,0 +1,186 @@
+/*Estilos maqueta*/
+body{
+	width: 100%;
+	margin: auto;
+	/*background-color: #f9f9f9;*/
+}
+#contenedor {
+	position: relative;
+	width: 100%;
+	
+}
+#cabecera {
+	position: relative;
+	/*width: 98%;*/
+	height: 100px;
+	background-color:#D3D3D3;
+	margin: auto;
+}
+.divNav{
+	position: relative;
+	float: right;
+	padding-top: 5px;
+	/*background-color:#000;*/
+}
+.imgLogo{
+	position: relative;
+	width: 80px;
+	height: 80px;
+	padding-top: 5px;
+	padding-left: 5px;
+}
+#divMenuIzq {
+	float: left;
+	width: 15%;	
+	padding-top: 5px;
+	background-color: #F4F4F4;
+	margin-top: 10px;	
+}
+#contenido {
+	float: left;
+	width: 85%;
+	background-color: #fff;
+	margin-top: 11px;
+	margin-bottom: 20px;
+	border-top:1px solid #7C7C7C;
+}
+#pie {
+	clear: both;
+	background-color:#D3D3D3;
+	color: blue;
+	text-align: center;
+	
+
+}
+.pPie1{
+	color:white;
+	
+	
+}
+.pPie2{
+	color:red;
+
+}
+
+/*estilos menu arriba*/
+ul.menuSup {
+clear: both;
+float: left;
+width: 100%;
+list-style: none;
+margin: 0;
+padding: 0;
+/*border-left: 1px solid #7C7C7C;*/
+}
+ul.menuSup li {
+float: left;
+}
+ul.menuSup li a {
+padding: .3em;
+display: block;
+text-decoration: none;
+color: blue;
+/*background: #F4F4F4;*/
+/*border-top: 1px solid #7C7C7C;*/
+border-right: 1px solid blue;
+/*border-bottom: 1px solid #9C9C9C;*/
+}
+
+/*estilos menu izquierdo*/
+
+ul.menuIzq {
+/*width: 180px;*/
+list-style: none;
+margin: 1;
+padding: 0;
+/*border: 1px solid #7C7C7C;*/
+padding-left: 5px;
+padding-right: 5px;
+background-color: #F4F4F4;
+}
+ul.menuIzq li {
+/*border-bottom:1px solid #7C7C7C;*/
+border-top: 1px solid #FFF;
+background: #D3D3D3;
+}
+ul.menuIzq li a {
+padding: .2em 0 .2em .5em;
+display:block;
+text-decoration: none;
+color: #333;
+}
+/*termina menu izquierdo*/
+
+/*estilos generales*/
+.divHead{
+	position: relative;	
+	/*color:#fff;*/
+	width: 100%;
+	/*margin: auto;*/
+	/*background-color: pink;*/
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	border-bottom: 1px solid #7C7C7C;
+}
+.head{
+	position: relative;
+	color: black;
+}
+.divGest{
+	position: relative;	
+	/*color:#fff;*/
+	width: 50%;
+	/*margin: auto;*/
+	/*background-color: pink;*/
+	/*text-align: center;*/
+	font-family: Arial, Helvetica, sans-serif;
+	border-bottom: 1px solid #7C7C7C;
+}
+.divEma{
+	position: relative;
+	float: left;
+	left: 5px;
+	/*width: 50%;*/
+	/*border-bottom: 1px solid #7C7C7C;*/
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+.imgEma{
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+}
+.divSearch{
+	position: relative;
+	float: right;
+	right: 5px;
+	/*width: 50%;*/
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+.inputText{
+	position: relative;
+	height: 30px;
+	border-radius: 3px;	
+	
+}
+.btnSearch{
+	position: relative;
+	width: 150px;
+	height: 35px;
+	border-radius: 3px;	
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+}
+.divTable{
+	position: relative;
+	width: 100%;
+	margin-top: 20px;
+	overflow: scroll;
+	/*top: 50px;*/
+	clear: both;
+}
+.tblDatos{
+	margin-bottom: 20px;
+}
+
