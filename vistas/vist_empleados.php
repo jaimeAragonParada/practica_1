@@ -23,7 +23,7 @@
 <!-- </div> -->
 <div class="divTable">
 	<center>
-		<form name="formEmpl" action="" method="post" id="form3" >
+		<form name="" action="" method="post" id="form3" >
 			<table id="tblEmpl" class="tblDatos">
 			<tr><th>Nombre</th><th>Sueldo</th><th>Turno</th></tr>
 			<?php				

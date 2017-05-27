@@ -3,7 +3,7 @@
 	<h2 class="head">ALTAS DE EMPLEADOS</h2>			
 </div>
 <center>
-	<FORM action='' method="post">
+	<FORM action='' method="post" name="formEmpl">
 		<TABLE border=0>		
 		<TR>
 		<TD>Nombre</TD>

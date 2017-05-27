@@ -153,25 +153,52 @@ function XMLHTTP()
 				var nombre=document.getElementById('nombreEmpl').value;
 				var sueldo=document.getElementById('sueldoEmpl').value;
 				var turno=document.getElementById('turnoEmpl').value;
-				// alert(turno);
+				 alert(turno);
 				if (turno!="Seleccionar") {
-				    var ajax = XMLHTTP();	
-					ajax.open("POST","../php/ejecAlta.php",true);				
-					ajax.onreadystatechange=function()
-					{
-					  if(ajax.readyState==4){
-					  	var respuesta=ajax.responseText;
-					  	alert(respuesta);
-					  	mostrVistEmpl();					  	
-	        			//document.getElementById('contenido').innerHTML=respuesta;
-					  }	
+					if (validar("formEmpl")){
+					    var ajax = XMLHTTP();	
+						ajax.open("POST","../php/ejecAlta.php",true);				
+						ajax.onreadystatechange=function()
+						{
+						  if(ajax.readyState==4){
+						  	var respuesta=ajax.responseText;
+						  	alert(respuesta);
+						  	mostrVistEmpl();					  	
+		        			//document.getElementById('contenido').innerHTML=respuesta;
+						  }	
+						}
+						ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+						ajax.send("nombre="+nombre+"&sueldo="+sueldo+"&turno="+turno);
 					}
-					ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
-					ajax.send("nombre="+nombre+"&sueldo="+sueldo+"&turno="+turno);
 				}
 				else
 					alert("Seleccone un turno");
 			}
+function Solo_Numerico(variable){
+    Numer=parseInt(variable);
+    if (isNaN(Numer)){
+        return "";
+    }
+    return Numer;
+}
+function ValNumero(Control){
+    Control.value=Solo_Numerico(Control.value);
+}
+function validar(nomForm){
+	// Validamos los campos de input text
+	camposTexto = document.getElementById(nomForm).elements; 
+	for (x=0; x < camposTexto.length; x++) {
+	if (camposTexto[x].value == '' && camposTexto[x].type=='text'){
+			alert("El campo " + camposTexto[x].name + " esta vacio y es OBLIGATORIO");
+			return false;
+			location='';
+    	}
+   }
+   return true;
+}
+			
+
+
 			function mostrtabla9(){
 			    var ajax = XMLHTTP();	
 				ajax.open("POST","vistas/modifica.php",true);
