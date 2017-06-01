@@ -159,6 +159,13 @@ color: #333;
 	margin-top: 10px;
 	margin-bottom: 20px;
 }
+.vistaContenido{
+	position: relative;	
+	width: 100%;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	
+}
 .inputText{
 	position: relative;
 	height: 30px;

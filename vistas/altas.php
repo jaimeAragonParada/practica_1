@@ -2,7 +2,8 @@
 <div class="divHead">
 	<h2 class="head">ALTAS DE EMPLEADOS</h2>			
 </div>
-<center>
+<div class="vistaContenido">
+	<center>
 	<FORM action='' method="post" id="formEmpl">
 		<TABLE border=0>		
 		<TR>
@@ -28,7 +29,8 @@
 		<input type='button' name="" value='Aceptar' onclick="ejecAlta()">
 		<input type='button' name="" value='Cancelar' onclick="mostrVistEmpl()">
 	</FORM>
-</center>
+	</center>
+</div>
 
 
 	
