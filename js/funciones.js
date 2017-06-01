@@ -153,9 +153,10 @@ function XMLHTTP()
 				var nombre=document.getElementById('nombreEmpl').value;
 				var sueldo=document.getElementById('sueldoEmpl').value;
 				var turno=document.getElementById('turnoEmpl').value;
-				 alert(turno);
+				//alert(turno);
 				if (turno!="Seleccionar") {
 					if (validar("formEmpl")){
+						//alert("sss");
 					    var ajax = XMLHTTP();	
 						ajax.open("POST","../php/ejecAlta.php",true);				
 						ajax.onreadystatechange=function()
@@ -174,22 +175,29 @@ function XMLHTTP()
 				else
 					alert("Seleccone un turno");
 			}
-function Solo_Numerico(variable){
-    Numer=parseInt(variable);
-    if (isNaN(Numer)){
-        return "";
+function validarNum(e){
+    tecla = (document.all) ? e.keyCode : e.which;
+
+    //Tecla de retroceso para borrar, siempre la permite
+    if (tecla==8){
+        return true;
     }
-    return Numer;
+        
+    // Patron de entrada, en este caso solo acepta numeros
+    patron =/[0-9]/;
+    tecla_final = String.fromCharCode(tecla);
+    return patron.test(tecla_final);
 }
-function ValNumero(Control){
-    Control.value=Solo_Numerico(Control.value);
-}
+
 function validar(nomForm){
-	// Validamos los campos de input text
+	//alert(nomForm);	
 	camposTexto = document.getElementById(nomForm).elements; 
+	//alert(camposTexto);
 	for (x=0; x < camposTexto.length; x++) {
 	if (camposTexto[x].value == '' && camposTexto[x].type=='text'){
 			alert("El campo " + camposTexto[x].name + " esta vacio y es OBLIGATORIO");
+			var idcampo=camposTexto[x].id;
+			document.getElementById(idcampo).focus();
 			return false;
 			location='';
     	}

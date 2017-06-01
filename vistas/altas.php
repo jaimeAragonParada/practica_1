@@ -3,15 +3,15 @@
 	<h2 class="head">ALTAS DE EMPLEADOS</h2>			
 </div>
 <center>
-	<FORM action='' method="post" name="formEmpl">
+	<FORM action='' method="post" id="formEmpl">
 		<TABLE border=0>		
 		<TR>
 		<TD>Nombre</TD>
-		<TD><INPUT type='text' id='nombreEmpl' size='30' maxlength='30'></TD>
+		<TD><INPUT type='text' name="nombre" id='nombreEmpl' size='30' maxlength='30'></TD>
 		</TR>
 		<TR>
 		<TD>Sueldo</TD>
-		<TD><INPUT type='text' id='sueldoEmpl' size='20' maxlength='20'></TD>
+		<TD><INPUT type='text' name="sueldo" id='sueldoEmpl' size='20' maxlength='20' onkeypress="return validarNum(event)"></TD>
 		</TR>
 		<TR>
 		<TD>Turno</TD>
