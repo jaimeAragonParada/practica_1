@@ -136,9 +136,9 @@ function XMLHTTP()
 				ajax.send("idEmpl="+idEmpl);
 			}
 			
-			function mostrAltas(){
+			function mostrAltasEmpls(){
 			    var ajax = XMLHTTP();	
-				ajax.open("POST","../vistas/altas.php",true);
+				ajax.open("POST","../vistas/altasEmpleados.php",true);
 				ajax.onreadystatechange=function()
 				{
 				  if(ajax.readyState==4){
@@ -175,6 +175,21 @@ function XMLHTTP()
 				else
 					alert("Seleccone un turno");
 			}
+function buscarEmpl(){
+	// alert('siii');
+	var nombre=document.getElementById("nombre").value;	
+	var ajax = XMLHTTP();	
+	ajax.open("POST","php/buscarEmpl.php",true);
+	ajax.onreadystatechange=function()
+	{
+	  if(ajax.readyState==4){
+		  	var respuesta=ajax.responseText;
+        	document.getElementById('contenido').innerHTML=respuesta;
+		}	
+	}
+	ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+	ajax.send("nombre="+nombre);
+}
 function validarNum(e){
     tecla = (document.all) ? e.keyCode : e.which;
 
@@ -189,9 +204,9 @@ function validarNum(e){
     return patron.test(tecla_final);
 }
 
-function validar(nomForm){
+function validar(idForm){
 	//alert(nomForm);	
-	camposTexto = document.getElementById(nomForm).elements; 
+	camposTexto = document.getElementById(idForm).elements; 
 	//alert(camposTexto);
 	for (x=0; x < camposTexto.length; x++) {
 	if (camposTexto[x].value == '' && camposTexto[x].type=='text'){

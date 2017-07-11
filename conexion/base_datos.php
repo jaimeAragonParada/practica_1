@@ -68,9 +68,11 @@ class BaseDatos
 		$totcol = mysql_num_fields($this->result);
 		return $totcol;
 	}
+	
 
 	function cerrarConexion()
 	{	
+
 		mysql_close($this->conex);
 
 	}
@@ -128,7 +130,7 @@ class BaseDatos
 	}
 	
     //Esta funcion presenta todos los registros
-	function getResultAsTable() //forma la tabla de consulta de los registros en tiempo de ejecución
+	function getResultAsTable() //forma la tabla de consulta de los registros en tiempo de ejecuciÃ³n
 	{
 		if ($this->numrows() > 0) 
 		{

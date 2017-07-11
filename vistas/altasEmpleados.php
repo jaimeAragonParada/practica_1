@@ -1,6 +1,5 @@
-
 <div class="divHead">
-	<h2 class="head">ALTAS DE EMPLEADOS</h2>			
+	<h2 class="head">ALTAS DE EMPLEADOS</h2>	  		
 </div>
 <div class="vistaContenido">
 	<center>
@@ -19,7 +18,8 @@
 		<TD><select id="turnoEmpl" id="">
 				<option>Seleccionar</option>
 				<option>Matutino</option>
-				<option>Vespertino</option>				
+				<option>Vespertino</option>
+				<option>Mixto</option>			
 				</select>
 		</TD>
 		</TR>

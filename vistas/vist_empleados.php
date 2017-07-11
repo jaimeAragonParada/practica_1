@@ -11,12 +11,12 @@
 	<div class="divEma">
 		<img class="imgEma" src="../images/elimEmpl.png" onclick="elimEmpl()">
 		<img class="imgEma" src="../images/modifEmpl.png" >
-		<img class="imgEma" src="../images/agregEmpl.png" onclick="mostrAltas()"	>
+		<img class="imgEma" src="../images/agregEmpl.png" onclick="mostrAltasEmpls()"	>
 	</div>
 	<div class="divSearch">
 		<form>
-			<input class="inputText" name="nombre" type="text" size="40" placeholder="Nombre del empleado" />
-			<input type="button" name="search" value="Buscar" class="btnSearch">
+			<input class="inputText"  id="nombre" name="nombre" type="text" size="40" placeholder="Nombre del empleado" />
+			<input type="button" onclick="buscarEmpl()" name="search" value="Buscar" class="btnSearch">
 			<!-- <a href="#" class="linkImg"><img class="imgEma" src="../images/buscador.png"></a> -->
 		</form>
 	</div>			

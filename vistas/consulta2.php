@@ -1,5 +1,3 @@
-
-
 <?php 
 	include("conexion/base_datos.php");
 	$objbd=new BaseDatos();//se declara el  objeto
