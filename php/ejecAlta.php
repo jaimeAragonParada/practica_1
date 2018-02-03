@@ -1,4 +1,4 @@
- <?php 
+<?php 
 	include("../conexion/base_datos.php");
 	$objbd=new BaseDatos();//se declara el  objeto
 	$objbd->conectar("localhost","prueba01","root","");//se llama el metodo.
@@ -16,4 +16,4 @@
 	
 ?>
 
-		
+

@@ -4,27 +4,29 @@
 	<title>practica_uno</title>
 	<link rel="stylesheet" type="text/css" href="estilos/estilos.css">	
 </head>
-<body onload="mostrHome()">
+<body onLoad="mostrHome()">
 	<!-- contiene todos los elementos -->
 	<div id="contenedor">
 		<!-- aqui empieza la cabecera -->
 		<div id="cabecera">			
-			<img src="images/logo.jpg" class="imgLogo">
+			<img src="images/3.jpg" class="imgLogo">
 			<div class="divNav">
 				<ul class="menuSup">
-					<li><a href="#" title="Enlace genérico" onclick="">Home</a></li>
-					<li><a href="templates/empleados.php" title="Enlace genérico" onclick="">Empleados</a></li>
-					<li><a href="templates/clientes.php" title="Enlace genérico" onclick="">Clientes</a></li>
-					<li><a href="#" title="Enlace genérico" onclick="">Provedores</a></li>					
-					<li><a href="#" title="Enlace genérico" onclick="">Inventario</a></li>					
+					<li class="activo"><a href="#" title="Enlace genérico" onClick="" >Principal</a></li>
+					<li><a href="templates/empleados.php" title="Enlace genérico" onClick="">Empleados</a></li>
+					<li><a href="templates/clientes.php" title="Enlace genérico" onClick="">Clientes</a></li>
+					<li><a href="#" title="Enlace genérico" onClick="">Provedores</a></li>					
+					<li><a href="#" title="Enlace genérico" onClick="">Inventario</a></li>					
 				</ul>
 			</div>
 		</div><!-- aqui termina la cabecera -->
 		<!-- aqui inicia el menu izquierdo -->
 		<div id="divMenuIzq">
+		
 			<ul class="menuIzq">
-				<li><a href="#" title="Enlace genérico" onclick="mostrSucurs()">Sucursales</a></li>
-				<li><a href="#" title="Enlace genérico"onclick="mostrPromo()">Promociones</a></li>						
+				<li><a href="#" title="Enlace genérico" onclick="mostrSucursal()">Sucursales</a></li>
+				<li><a href="#" title="Enlace genérico"onclick="mostrPromo()">Promociones</a></li>	
+				
 			</ul>
 		</div><!-- aqui termina el menu izquierdo -->
 		<!-- aqui se cargan las vistas-->

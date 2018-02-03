@@ -35,6 +35,8 @@
 				<td width="200px" align="center"><?php echo $fila[3];?></td>	
 			</tr>			
 			<?php			  
+
+			
 				}
 			?>
 			</table>

@@ -1,10 +1,12 @@
+
 <div class="divHead">
-	<h2 class="head">ALTAS DE EMPLEADOS</h2>	  		
-</div>
+
+   <h2 class="head">ALTAS DE EMPLEADOS</h2>	     
+   </div>
 <div class="vistaContenido">
 	<center>
 	<FORM action='' method="post" id="formEmpl">
-		<TABLE border=0>		
+		<TABLE border=0>	
 		<TR>
 		<TD>Nombre</TD>
 		<TD><INPUT type='text' name="nombre" id='nombreEmpl' size='30' maxlength='30'></TD>

@@ -1,3 +1,4 @@
+	
 function XMLHTTP()
 			{
 				  	var Object;
@@ -16,11 +17,28 @@ function XMLHTTP()
 						}
 						return Object;
 					
-			}
+			}	
+
+			
 			function mostrHome(){
 				// alert('siii');
 			    var ajax = XMLHTTP();	
-				ajax.open("POST","vistas/vist_home.php",true);
+				ajax.open("POST","vistas/login.php",true);
+				ajax.onreadystatechange=function()
+				{
+				  if(ajax.readyState==4){
+				  	var respuesta=ajax.responseText;
+        			document.getElementById('contenido').innerHTML=respuesta;
+				  }	
+				}
+				ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+				ajax.send();
+		     }
+			
+			function mostrPrincipal(){
+				// alert('siii');
+			    var ajax = XMLHTTP();	
+				ajax.open("POST","../vistas/vist_principal.php",true);
 				ajax.onreadystatechange=function()
 				{
 				  if(ajax.readyState==4){
@@ -31,6 +49,8 @@ function XMLHTTP()
 				ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
 				ajax.send();
 			}
+
+
 			function mostrVistEmpl(){
 				//alert('sii');
 			    var ajax = XMLHTTP();	
@@ -48,6 +68,20 @@ function XMLHTTP()
 			function mostrVistClient(){
 			    var ajax = XMLHTTP();	
 				ajax.open("POST","../vistas/vist_clientes.php",true);
+				ajax.onreadystatechange=function()
+				{
+				  if(ajax.readyState==4){
+				  	var respuesta=ajax.responseText;
+        			document.getElementById('contenido').innerHTML=respuesta;
+				  }	
+				}
+				ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+				ajax.send();
+			}
+			function mostrVistEmplBuscado(){
+				//alert('sii');
+			    var ajax = XMLHTTP();	
+				ajax.open("POST","../vistas/vist_empleado.php",true);
 				ajax.onreadystatechange=function()
 				{
 				  if(ajax.readyState==4){
@@ -158,7 +192,8 @@ function XMLHTTP()
 					if (validar("formEmpl")){
 						//alert("sss");
 					    var ajax = XMLHTTP();	
-						ajax.open("POST","../php/ejecAlta.php",true);				
+			
+					ajax.open("POST","../php/ejecAlta.php",true);				
 						ajax.onreadystatechange=function()
 						{
 						  if(ajax.readyState==4){
@@ -179,12 +214,14 @@ function buscarEmpl(){
 	// alert('siii');
 	var nombre=document.getElementById("nombre").value;	
 	var ajax = XMLHTTP();	
-	ajax.open("POST","php/buscarEmpl.php",true);
+	ajax.open("POST","../php/buscarEmpl.php",true);
 	ajax.onreadystatechange=function()
 	{
 	  if(ajax.readyState==4){
 		  	var respuesta=ajax.responseText;
-        	document.getElementById('contenido').innerHTML=respuesta;
+		  	mostrVistEmplBuscado(respuesta);
+		  	// alert(respuesta);
+        	// document.getElementById('contenido').innerHTML=respuesta;
 		}	
 	}
 	ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
@@ -221,11 +258,11 @@ function validar(idForm){
 }
 			
 
-
-			function mostrtabla9(){
+			function mostrSucursal(){
 			    var ajax = XMLHTTP();	
-				ajax.open("POST","vistas/modifica.php",true);
+				ajax.open("POST","vistas/sucursales.php",true);
 				ajax.onreadystatechange=function()
+			
 				{
 				  if(ajax.readyState==4){
 				  	var respuesta=ajax.responseText;
@@ -237,9 +274,9 @@ function validar(idForm){
 			}
 
 
-			 function mostrtabla10(){
+			 function mostrPromo(){
 			    // var ajax = XMLHTTP();	
-				ajax.open("POST","vistas/alta2.php",true);
+				ajax.open("POST","vistas/vist_promociones.php",true);
 				ajax.onreadystatechange=function()
 				{
 				  if(ajax.readyState==4){
@@ -264,3 +301,10 @@ function validar(idForm){
 				ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
 				ajax.send();
 			 }
+
+			
+
+			 
+            	
+            
+

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,10 +10,11 @@
 	<div id="contenedor">
 		<!-- aqui empieza la cabecera -->
 		<div id="cabecera">			
-			<img src="../images/logo.jpg" class="imgLogo">
+			<img src="../images/3.jpg" class="imgLogo">
 			<div class="divNav">
 				<ul class="menuSup">
-					<li><a href="../index.php" title="Enlace genérico" onclick="">Home</a></li>
+					<li><a href="../index.php" title="Enlace genérico" onclick="">Principal</a></li>
+
 					<li><a href="#" title="Enlace genérico" onclick="">Empleados</a></li>
 					<li><a href="../templates/clientes.php" title="Enlace genérico" onclick="">Clientes</a></li>
 					<li><a href="#" title="Enlace genérico" onclick="">Provedores</a></li>					
@@ -23,7 +25,7 @@
 		<!-- aqui inicia el menu izquierdo -->
 		<div id="divMenuIzq">
 			<ul class="menuIzq">
-				<li><a href="#" title="Enlace genérico" onclick="mostrSucurs()">Sucursales</a></li>
+				<li><a href="#" title="Enlace genérico" onclick="mostrSucursal()">Sucursales</a></li>
 				<li><a href="#" title="Enlace genérico"onclick="mostrPromo()">Promociones</a></li>						
 			</ul>
 		</div><!-- aqui termina el menu izquierdo -->
