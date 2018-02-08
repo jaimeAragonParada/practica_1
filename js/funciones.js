@@ -52,7 +52,7 @@ function XMLHTTP()
 
 
 			function mostrVistEmpl(){
-				//alert('sii');
+				// alert('sii');
 			    var ajax = XMLHTTP();	
 				ajax.open("POST","../vistas/vist_empleados.php",true);
 				ajax.onreadystatechange=function()
@@ -78,10 +78,10 @@ function XMLHTTP()
 				ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
 				ajax.send();
 			}
-			function mostrVistEmplBuscado(){
+			function mostrVistEmplBuscado(resp){
 				//alert('sii');
 			    var ajax = XMLHTTP();	
-				ajax.open("POST","../vistas/vist_empleado.php",true);
+				ajax.open("POST","../vistas/vist_empleadoBuscar.php",true);
 				ajax.onreadystatechange=function()
 				{
 				  if(ajax.readyState==4){
@@ -90,7 +90,7 @@ function XMLHTTP()
 				  }	
 				}
 				ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
-				ajax.send();
+				ajax.send("resp="+resp);
 			}
 			function cambColor(idEmpl){
 				//alert(num);
@@ -212,20 +212,26 @@ function XMLHTTP()
 			}
 function buscarEmpl(){
 	// alert('siii');
-	var nombre=document.getElementById("nombre").value;	
-	var ajax = XMLHTTP();	
-	ajax.open("POST","../php/buscarEmpl.php",true);
-	ajax.onreadystatechange=function()
-	{
-	  if(ajax.readyState==4){
-		  	var respuesta=ajax.responseText;
-		  	mostrVistEmplBuscado(respuesta);
-		  	// alert(respuesta);
-        	// document.getElementById('contenido').innerHTML=respuesta;
-		}	
+	var nombre=document.getElementById("nombreEmpl").value;	
+	if (nombre!="") {
+		var ajax = XMLHTTP();	
+		ajax.open("POST","../php/buscarEmpl.php",true);
+		ajax.onreadystatechange=function()
+		{
+		  if(ajax.readyState==4){
+			  	var respuesta=ajax.responseText;
+			  	mostrVistEmplBuscado(respuesta);
+			  	// alert(respuesta);
+	        	// document.getElementById('contenido').innerHTML=respuesta;
+			}	
+		}
+		ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+		ajax.send("nombre="+nombre);
 	}
-	ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
-	ajax.send("nombre="+nombre);
+	else{
+		alert("Introduzca un nombre");
+		document.getElementById("nombreEmpl").focus();
+	}
 }
 function validarNum(e){
     tecla = (document.all) ? e.keyCode : e.which;
@@ -249,7 +255,7 @@ function validar(idForm){
 	if (camposTexto[x].value == '' && camposTexto[x].type=='text'){
 			alert("El campo " + camposTexto[x].name + " esta vacio y es OBLIGATORIO");
 			var idcampo=camposTexto[x].id;
-			document.getElementById(idcampo).focus();
+			document.getElementById("idcampo").focus();
 			return false;
 			location='';
     	}

@@ -1,8 +1,9 @@
 <?php 
-	include("../conexion/base_datos.php");
-	$objbd=new BaseDatos();//se declara el  objeto
-	$objbd->conectar("localhost","prueba01","root","");//se llama el metodo.	
-	$objbd->consulta("select * from empleados");	
+	// include("../conexion/base_datos.php");
+	// $objbd=new BaseDatos();//se declara el  objeto
+	// $objbd->conectar("localhost","prueba01","root","");//se llama el metodo.	
+	// $objbd->consulta("select * from empleados");	
+	$arrayEmpleados=json_decode($_POST["resp"])
 ?>	
 <div class="divHead">
 	<h2 class="head">EMPLEADOS</h2>			
@@ -26,8 +27,10 @@
 		<form name="" action="" method="post" id="form3" >
 			<table id="tblEmpl" class="tblDatos">
 			<tr><th>Nombre</th><th>Sueldo</th><th>Turno</th></tr>
-			<?php				
-				while($fila=$objbd->fetchRow()){						
+			<?php	
+				for ($i=0; $i <count($arrayEmpleados) ; $i++) {
+				$fila=$arrayEmpleados[$i];	
+				// while($fila=$objbd->fetchRow()){						
 			?>
 				<tr style="background-color:#B0C4DE; cursor:pointer;" id=<?php echo $fila[0];?> onclick="cambColor(<?php echo $fila[0];?>)">				  	
 			    <td width="100px" align="center"><?php echo $fila[1];?></td>

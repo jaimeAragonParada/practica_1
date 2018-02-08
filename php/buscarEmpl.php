@@ -5,9 +5,8 @@ $objbd=new BaseDatos();
 $objbd->conectar("localhost","prueba01","root","");
 $sql="select * from empleados where nombre='$nombre'";
 $objbd->consulta($sql);
-while ($fila=$objbd->fetchRow()) {
-	
-	$empleadosEncontr=array();
+$empleadosEncontr=array();
+while ($fila=$objbd->fetchRow()) {	
 	//echo json_encode($fila);
 	for ($i=0; $i <sizeof($fila) ; $i++) { 
 		if ($fila[$i]==$nombre) {
@@ -16,8 +15,13 @@ while ($fila=$objbd->fetchRow()) {
 			
 		}
 	}
+	
+}
+if (count($empleadosEncontr)>0) {
 	echo json_encode($empleadosEncontr);
 }
+else
+	echo "El empleado no existe";
 ?>
 
 
