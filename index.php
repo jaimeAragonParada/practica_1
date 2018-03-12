@@ -35,9 +35,9 @@
 		</div><!-- aqui termina el contenido-->
 		<!-- aqui inicia el pie-->
 		<div id="pie">
-			<p class="pPie1">Todos los derechos reservados Parisina 2017</p>
+			<p class="">Todos los derechos reservados Parisina 2017</p>
 			<p>Cualquier duda pasar a parisina enfrente del mercado 20 de noviembre</p>
-			<p class="pPie2">Contacto</p>
+			<p class="">Contacto</p>
 		</div><!-- aqui se termina el pie-->
 	</div>
 	<script type="text/javascript" src="js/funciones.js"></script>

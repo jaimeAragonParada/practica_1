@@ -23,7 +23,7 @@ function XMLHTTP()
 			function mostrHome(){
 				// alert('siii');
 			    var ajax = XMLHTTP();	
-				ajax.open("POST","vistas/login.php",true);
+				ajax.open("POST","vistas/vist_home.php",true);
 				ajax.onreadystatechange=function()
 				{
 				  if(ajax.readyState==4){

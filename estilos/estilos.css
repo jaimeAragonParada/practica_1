@@ -30,27 +30,33 @@ body{
 	padding-left: 5px;
 }
 #divMenuIzq {
+	position: relative;
+	margin-top: 11px;
+	/*margin-right: 10px;*/
 	float: left;
-	width: 15%;	
+	width: 15%;
+	/*height: 100%;	*/
 	padding-top: 5px;
-	background-color: #F4F4F4;
-	margin-top: 10px;	
+	/*background-color: #F4F4F4;*/
+	/*margin-top: 10px;	*/
 }
 #contenido {
+	position: relative;
 	float: left;
 	width: 85%;
 	/*height: 50px;*/
-	background-color: #fff;
+	/*background-color: #fff;*/
+	background-color: #F4F4F4;
 	margin-top: 11px;
-	margin-bottom: 20px;
-	border-top:1px solid #7C7C7C;
+	/*margin-bottom: 20px;*/
+	/*border-top:1px solid #7C7C7C;*/
 }
 #pie {
 	clear: both;
 	background-color:#D3D3D3;
 	color: blue;
 	text-align: center;
-	
+	font-family: Arial, Helvetica, sans-serif;
 
 }
 .pPie1{
@@ -64,7 +70,7 @@ body{
 }
 
 /*estilos menu arriba*/
-.activo{
+ul.menuSup li.activo{
 	background: #D3D3D3 !important;
 	color:red;
 }
@@ -73,8 +79,10 @@ clear: both;
 float: left;
 width: 100%;
 list-style: none;
-margin: 0;
+/*margin: 0;*/
 padding: 0;
+margin-right: 15px;
+
 /*border-left: 1px solid #7C7C7C;*/
 }
 ul.menuSup li {
@@ -84,11 +92,12 @@ ul.menuSup li a {
 padding: .3em;
 display: block;
 text-decoration: none;
-color: blue;
+color: white;
 /*background: #F4F4F4;*/
 /*border-top: 1px solid #7C7C7C;*/
-border-right: 1px solid blue;
+/*border-right: 1px solid blue;*/
 /*border-bottom: 1px solid #9C9C9C;*/
+font-family: Arial, Helvetica, sans-serif;
 }
 
 /*estilos menu izquierdo*/
@@ -96,38 +105,49 @@ border-right: 1px solid blue;
 ul.menuIzq {
 /*width: 180px;*/
 list-style: none;
-margin: 1;
-padding: 0;
+/*margin: 1;*/
+margin-top: -5px;
+/*padding: 0;*/
 /*border: 1px solid #7C7C7C;*/
 padding-left: 5px;
 padding-right: 5px;
-background-color: #F4F4F4;
+/*background-color: #F4F4F4;*/
 }
 ul.menuIzq li {
 /*border-bottom:1px solid #7C7C7C;*/
 border-top: 1px solid #FFF;
 background: #D3D3D3;
+border-radius: 3px;
+height: 40px;
+
 }
 ul.menuIzq li a {
 padding: .2em 0 .2em .5em;
 display:block;
 text-decoration: none;
-color: #333;
+color: white;
+font-family: Arial, Helvetica, sans-serif;
+text-align: center;
+
 }
 /*termina menu izquierdo*/
 
 /*estilos generales*/
 .divHead{
-	position: relative;	
+	/*position: relative;*/
+	margin-right:10px;
+	margin-left:10px;	
 	/*color:#fff;*/
-	width: 100%;
+	/*width: 100%;*/
 	/*margin: auto;*/
 	/*background-color: pink;*/
 	text-align: center;
 	font-family: Arial, Helvetica, sans-serif;
-	border-bottom: 1px solid #7C7C7C;
+	border-bottom: 3px solid #7C7C7C;
+	/*border-top: 3px solid #7C7C7C;*/
 }
 .head{
+
 	position: relative;
 	color: black;
 }
@@ -139,7 +159,7 @@ color: #333;
 	/*background-color: pink;*/
 	/*text-align: center;*/
 	font-family: Arial, Helvetica, sans-serif;
-	border-bottom: 1px solid #7C7C7C;
+	/*border-bottom: 1px solid #7C7C7C;*/
 }
 .divEma{
 	position: relative;
@@ -187,9 +207,9 @@ color: #333;
 .divTable{
 	position: relative;
 	width: 100%;
-	height: 350px;
+	height: 100%;
 	margin-top: 20px;
-	overflow: scroll;
+	/*overflow: scroll;*/
 	/*top: 50px;*/
 	clear: both;
 }
