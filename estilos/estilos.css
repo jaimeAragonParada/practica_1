@@ -13,7 +13,8 @@ body{
 	position: relative;
 	/*width: 98%;*/
 	height: 100px;
-	background-color:#D3D3D3;
+	/*background-color:#D3D3D3;*/
+	background-color:#FF0000;
 	margin: auto;
 }
 .divNav{
@@ -46,14 +47,16 @@ body{
 	width: 85%;
 	/*height: 50px;*/
 	/*background-color: #fff;*/
-	background-color: #F4F4F4;
+	/*background-color: #F4F4F4;*/
+	background-color: #F08080;
 	margin-top: 11px;
 	/*margin-bottom: 20px;*/
 	/*border-top:1px solid #7C7C7C;*/
 }
 #pie {
 	clear: both;
-	background-color:#D3D3D3;
+	/*background-color:#D3D3D3;*/
+	background-color:#FF0000;
 	color: blue;
 	text-align: center;
 	font-family: Arial, Helvetica, sans-serif;
@@ -71,7 +74,7 @@ body{
 
 /*estilos menu arriba*/
 ul.menuSup li.activo{
-	background: #D3D3D3 !important;
+	background: #D3D3D3;
 	color:red;
 }
 ul.menuSup {
@@ -116,7 +119,8 @@ padding-right: 5px;
 ul.menuIzq li {
 /*border-bottom:1px solid #7C7C7C;*/
 border-top: 1px solid #FFF;
-background: #D3D3D3;
+/*background: #D3D3D3;*/
+background-color:#FF0000;
 border-radius: 3px;
 height: 40px;
 

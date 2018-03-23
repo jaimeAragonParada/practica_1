@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 3.3.9
+-- version 3.5.1
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 05-05-2017 a las 01:40:05
--- Versión del servidor: 5.5.8
--- Versión de PHP: 5.3.5
+-- Tiempo de generación: 20-03-2018 a las 19:03:06
+-- Versión del servidor: 5.5.24-log
+-- Versión de PHP: 5.4.3
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -33,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `clientes` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcar la base de datos para la tabla `clientes`
+-- Volcado de datos para la tabla `clientes`
 --
 
 INSERT INTO `clientes` (`id_cliente`, `nombre`, `direccion`, `telefono`) VALUES
@@ -47,21 +48,22 @@ INSERT INTO `clientes` (`id_cliente`, `nombre`, `direccion`, `telefono`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `empleados` (
-  `id_empleado` int(11) NOT NULL,
+  `id_empleado` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `nombre` varchar(10) NOT NULL,
   `sueldo` double NOT NULL,
-  `turno` varchar(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `turno` varchar(10) NOT NULL,
+  PRIMARY KEY (`id_empleado`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=18 ;
 
 --
--- Volcar la base de datos para la tabla `empleados`
+-- Volcado de datos para la tabla `empleados`
 --
 
 INSERT INTO `empleados` (`id_empleado`, `nombre`, `sueldo`, `turno`) VALUES
-(160017, 'Rosa Marti', 2000, 'Matutino'),
-(262082, 'Margarita ', 2500, 'Matutino'),
-(28999, 'Sergio Lun', 1900, 'vespertino'),
-(28000, 'Lorenzo Me', 3000, 'Vespertino');
+(14, 'paco', 30000, 'Vespertino'),
+(15, 'fermin', 30000, 'Matutino'),
+(16, 'jose', 2345, 'Vespertino'),
+(17, 'maria', 33223, 'Matutino');
 
 -- --------------------------------------------------------
 
@@ -78,7 +80,7 @@ CREATE TABLE IF NOT EXISTS `inventario` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcar la base de datos para la tabla `inventario`
+-- Volcado de datos para la tabla `inventario`
 --
 
 INSERT INTO `inventario` (`id_inventario`, `fecha`, `articulo`, `piezas`, `precio`) VALUES
@@ -100,7 +102,7 @@ CREATE TABLE IF NOT EXISTS `producto` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcar la base de datos para la tabla `producto`
+-- Volcado de datos para la tabla `producto`
 --
 
 INSERT INTO `producto` (`id_producto`, `Articulo`, `cantidad`, `precio`) VALUES
@@ -127,9 +129,13 @@ CREATE TABLE IF NOT EXISTS `proveedores` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcar la base de datos para la tabla `proveedores`
+-- Volcado de datos para la tabla `proveedores`
 --
 
 INSERT INTO `proveedores` (`id_proveedores`, `nombre`, `productos`, `Lugar`) VALUES
 (1, 'EverShar', 'Tijeras', 'China'),
 (2, 'Seralon', 'Hilos', 'Mexico');
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
